@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FaithFuel – Christian & Islamic Quotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom right, #f0f4ff, #e6ffe6);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    #quote {
+      font-size: 1.5em;
+      max-width: 90%;
+      margin: 30px auto;
+      color: #333;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .premium-box {
+      margin-top: 60px;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .premium-box h2 {
+      font-size: 1.6em;
+      color: #28a745;
+    }
+
+    .premium-box p {
+      font-size: 1em;
+      color: #555;
+      max-width: 600px;
+      margin: 10px auto 20px;
+    }
+
+    .premium-box a button {
+      background-color: #28a745;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.85em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FaithFuel</h1>
+  <div id="quote">"Indeed, with hardship comes ease." — Quran 94:6</div>
+  <button onclick="nextQuote()">Next Quote</button>
+
+  <div class="premium-box">
+    <h2>🔥 Want More Powerful Wisdom?</h2>
+    <p>Unlock exclusive Christian & Islamic premium quotes, deep spiritual content, downloadable eBooks, and direct support from the creator. One-time access: <strong>$5 only</strong>.</p>
+    <a href="https://payhip.com/b/zkCb2" target="_blank">
+      <button>Unlock Premium for $5</button>
+    </a>
+  </div>
+
+  <footer>
+    © 2025 Mustafa Ahmed – All rights reserved. Powered by faith ✨
+  </footer>
+
+  <script>
+    const quotes = [
+      `"Indeed, with hardship comes ease." — Quran 94:6`,
+      `"I can do all things through Christ who strengthens me." — Philippians 4:13`,
+      `"Allah does not burden a soul beyond that it can bear." — Quran 2:286`,
+      `"The Lord is my shepherd; I shall not want." — Psalm 23:1`,
+      `"And whoever puts their trust in Allah – then He will suffice him." — Quran 65:3`,
+      `"Trust in the Lord with all your heart and lean not on your own understanding." — Proverbs 3:5`,
+      `"Verily, in the remembrance of Allah do hearts find rest." — Quran 13:28`,
+      `"Be strong and courageous. Do not be afraid." — Joshua 1:9`
+    ];
+
+    let i = 0;
+    function nextQuote() {
+      i = (i + 1) % quotes.length;
+      document.getElementById("quote").innerText = quotes[i];
+    }
+  </script>
+
+</body>
+</html>
